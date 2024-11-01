@@ -136,3 +136,64 @@
     </script>
 </body>
 </html>
+
+
+      <!-- Scripts -->
+	  <script src="assets/js/jquery.min.js"></script>
+	  <script src="assets/js/main.js"></script>
+	  <script>
+		  // Project Data
+		  const projects = [
+			  {
+				  title: "Kidney Disease Classification",
+				  description: "A deep learning project to classify kidney disease based on medical data.",
+				  image: "images/kidney-disease.jpg",
+				  link: "https://github.com/Md786Rizwan/Kidney_Disease_Classification_Deep_Learning_Project.git"
+			  },
+			  {
+				  title: "Laptop Price Predictor",
+				  description: "Machine learning model to predict laptop prices based on features.",
+				  image: "images/laptop-price.jpg",
+				  link: "https://github.com/Md786Rizwan/Laptop_Price_Predictor_Using_ML.git"
+			  },
+			  {
+				  title: "Phishing Site Detection",
+				  description: "A project to detect phishing websites using web scraping and ML.",
+				  image: "images/phishing-site.jpg",
+				  link: "https://github.com/Md786Rizwan/Phising_Site.git"
+			  },
+			  {
+				  title: "AI and ML Courses",
+				  description: "A collection of AI and ML courses and resources I've engaged with.",
+				  image: "images/ai-ml-courses.jpg",
+				  link: "https://github.com/Md786Rizwan/AI-and-ML-courses.git"
+			  }
+			  // Add more projects here as needed
+		  ];
+
+		  // Function to Generate Project Cards
+		  function generateProjects() {
+			  const projectGrid = document.getElementById("project-grid");
+			  projects.forEach(project => {
+				  const projectCard = document.createElement("div");
+				  projectCard.className = "project-card";
+
+				  projectCard.innerHTML = `
+					  <h3>${project.title}</h3>
+					  <a href="${project.link}" target="_blank">
+						  <img src="${project.image}" alt="${project.title} project image" class="project-image">
+					  </a>
+					  <p>${project.description}</p>
+					  <a href="${project.link}" target="_blank" class="button">View Project</a>
+				  `;
+
+				  projectGrid.appendChild(projectCard);
+			  });
+		  }
+
+		  // Generate Projects on Page Load
+		  document.addEventListener("DOMContentLoaded", generateProjects);
+	  </script>
+  </div>
+</body>
+</html>
