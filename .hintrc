@@ -9,7 +9,8 @@
       {
         "ignore": [
           "-webkit-text-size-adjust",
-          "-webkit-text-size-adjust: none"
+          "-webkit-text-size-adjust: none",
+          "-webkit-overflow-scrolling"
         ]
       }
     ]
