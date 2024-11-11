@@ -4,14 +4,10 @@
   ],
   "hints": {
     "meta-viewport": "off",
-    "compat-api/css": [
+    "axe/forms": [
       "default",
       {
-        "ignore": [
-          "-webkit-text-size-adjust",
-          "-webkit-text-size-adjust: none",
-          "-webkit-overflow-scrolling"
-        ]
+        "select-name": "off"
       }
     ],
     "axe/language": [
@@ -19,7 +15,6 @@
       {
         "html-has-lang": "off"
       }
-    ],
-    "axe/forms": "off"
+    ]
   }
 }

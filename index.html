@@ -6,6 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        /* Additional Styling */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #intro h1 {
+            color: #1f7a8c;
+        }
+        #intro p {
+            color: #2c3e50;
+        }
+        .button {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #2980b9;
+        }
+        #darkModeToggle {
+            background-color: #34495e;
+            color: white;
+            cursor: pointer;
+        }
+        .dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        .dark-mode a {
+            color: #f39c12;
+        }
+    </style>
 </head>
 <body class="is-preload">
 
@@ -26,7 +63,7 @@
         <!-- Header -->
         <header id="header">
             <a href="index.html" class="logo">Md Rizwan | Data Analyst</a>
-            <a href="Resume@.pdf" class="button small">Download Resume</a>
+            <a href="assets/files/Resume@.pdf" class="button small" download="Md_Rizwan_Resume.pdf">Download Resume</a>
             <button id="darkModeToggle" class="button small">Dark Mode</button>
         </header>
 
@@ -55,7 +92,7 @@
                     <h2><a href="https://github.com/Md786Rizwan/Laptop_Price_Predictor_Using_ML">Laptop Price Prediction</a></h2>
                     <p>Using machine learning algorithms to predict laptop prices based on specifications and features.</p>
                 </header>
-                <a href="#" class="image main"><img src="image.png" alt="Laptop Price Prediction" /></a>
+                <a href="#" class="image main"><img src="images/image.png" alt="Laptop Price Prediction" /></a>
                 <ul class="actions special">
                     <li><a href="https://github.com/Md786Rizwan/Laptop_Price_Predictor_Using_ML" class="button large">View Project</a></li>
                 </ul>
@@ -68,7 +105,7 @@
                         <span class="date">2023</span>
                         <h2><a href="#">Heart Disease Classification</a></h2>
                     </header>
-                    <a href="https://github.com/Md786Rizwan/Heart_Disease_Classification" class="image fit"><img src="heart_disease_classification.png" alt="Heart Disease Classification" /></a>
+                    <a href="https://github.com/Md786Rizwan/Heart_Disease_Classification" class="image fit"><img src="images/kidney.png" alt="Heart Disease Classification" /></a>
                     <p>A CNN model for classifying heart disease based on medical data.</p>
                     <ul class="actions special">
                         <li><a href="https://github.com/Md786Rizwan/Heart_Disease_Classification" class="button">View Project</a></li>
@@ -79,7 +116,7 @@
                         <span class="date">2023</span>
                         <h2><a href="#">Generative Adversarial Networks on Fashion Design</a></h2>
                     </header>
-                    <a href="#" class="image fit"><img src="fashion_design_gan.png" alt="GAN for Fashion Design" /></a>
+                    <a href="#" class="image fit"><img src="images/GANs.jpg" alt="GAN for Fashion Design" /></a>
                     <p>Developed a GAN model for fashion product generation and style transfer.</p>
                     <ul class="actions special">
                         <li><a href="#" class="button">View Project</a></li>
@@ -90,7 +127,7 @@
                         <span class="date">2024</span>
                         <h2><a href="#">Phishing Site Classifier</a></h2>
                     </header>
-                    <a href="#" class="image fit"><img src="phishing_site_classifier.png" alt="Phishing Site Classifier" /></a>
+                    <a href="#" class="image fit"><img src="images/NLP.png" alt="Phishing Site Classifier" /></a>
                     <p>A machine learning classifier to detect phishing sites.</p>
                     <ul class="actions special">
                         <li><a href="#" class="button">View Project</a></li>
@@ -98,27 +135,21 @@
                 </article>
             </section>
 
-            <!-- Skills Section -->
-            <section id="skills" class="posts">
-                <h2>Technical Skills</h2>
-                <ul>
-                    <li>Languages: Python, C++, SQL</li>
-                    <li>Data Analysis: Python, Pandas, NumPy, Scikit-Learn, Matplotlib, Seaborn</li>
-                    <li>Database Management: MySQL, SSMS, DBMS</li>
-                    <li>Machine Learning & AI: TensorFlow, CNNs, GANs, Deep Learning</li>
-                    <li>Tools: Tableau, DBMS, MS Excel</li>
+            <article>
+                <header>
+                    <span class="date">2023</span>
+                    <h2><a href="#">Data Exploration</a></h2>
+                </header>
+                <a href="https://colab.research.google.com/drive/1PrKjYscLQSiUYL5Z_GPvypn8OEr3AWUP?usp=sharing" class="image fit"><img src="images/Analysis.png" alt="Data Exploration" /></a>
+                <p>Making The Raw Data Into Making High Precision Model And Taking Decision from this Raw Datasets
+                     Using Analyticals Tools and Functions. </p>
+                <ul class="actions special">
+                    <li><a href="#" class="button">View Project</a></li>
                 </ul>
-            </section>
+            </article>
+        </section>
 
-            <!-- Experience Section -->
-            <section id="experience" class="posts">
-                <h2>Professional Experience</h2>
-                <ul>
-                    <li>Database Assistant, AI Creative Clicks (4 months)</li>
-                    <li>Data Science Internship, Infosys Springboard (2 months)</li>
-                    <li>Machine Learning Internship, InternshipStudio (2 months)</li>
-                </ul>
-            </section>
+            
 
         </div>
 
@@ -162,6 +193,13 @@
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
+<script>
+    // Dark Mode Toggle
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    darkModeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+    });
+</script>
 
 </body>
 </html>
